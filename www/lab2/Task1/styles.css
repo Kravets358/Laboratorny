@@ -1,0 +1,24 @@
+body {
+    background-color: #f8d7da;
+    font-family: Arial, sans-serif;
+}
+
+ol {
+    list-style-type: decimal;
+    padding: 20px;
+}
+
+li {
+    background-color: #b04f54;
+    margin: 10px;
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+li span {
+    background-color: #7f353a;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
