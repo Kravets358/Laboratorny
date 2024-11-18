@@ -6,42 +6,69 @@
 
 body {
     font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
 }
 
-header, nav, main, aside, footer {
-    border: 2px solid blue; 
-    background-color: lightblue; 
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "menu content extra-footer"
+        "menu content extra-footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    width: 60%;
+    height: 80%;
+    border: 1px solid black;
+    background-color: white;
+    gap: 2px;
 }
 
 header {
+    grid-area: header;
+    border: 1px solid black;
     text-align: center;
     padding: 10px;
+    background-color: #e6f7ff;
 }
 
 nav {
-    float: left;
-    width: 25%;
+    grid-area: menu;
+    border: 1px solid black;
     padding: 10px;
-    height: 200px; 
+    text-align: center;
+    background-color: #e6f7ff;
 }
 
 main {
-    float: left;
-    width: 50%;
+    grid-area: content;
+    border: 1px solid black;
     padding: 10px;
-    height: 200px;
+    text-align: center;
+    background-color: #e6f7ff;
+}
+
+.extra-footer-container {
+    grid-area: extra-footer;
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Розподіл на дві рівні частини */
+    height: 100%;
 }
 
 aside.extra {
-    float: left;
-    width: 25%;
+    border: 1px solid black;
     padding: 10px;
-    height: 100px; 
+    text-align: center;
+    background-color: #e6f7ff;
 }
 
 footer {
-    clear: both;
-    text-align: center;
+    border: 1px solid black;
     padding: 10px;
-    margin-top: 10px;
+    text-align: center;
+    background-color: #e6f7ff;
 }
